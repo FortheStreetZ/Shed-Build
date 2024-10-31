@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Shed Builder | Tuff Built LLC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Build Your Custom Shed</h1>
+        <p>Design your shed to fit your exact needs and see an instant price estimate!</p>
+    </header>
+
+    <section class="builder-container">
+        <form id="shedBuilderForm">
+            <!-- Shed Dimensions -->
+            <h2>Shed Dimensions</h2>
+            <label>Length (ft): <input type="number" id="length" min="1" value="10"></label>
+            <label>Width (ft): <input type="number" id="width" min="1" value="10"></label>
+            <label>Height (ft): <input type="number" id="height" min="6" value="8"></label>
+
+            <!-- Shed Materials -->
+            <h2>Shed Materials</h2>
+            <label>Roofing Material:
+                <select id="roofMaterial">
+                    <option value="standard">Standard Shingle</option>
+                    <option value="metal">Metal</option>
+                    <option value="tile">Tile</option>
+                </select>
+            </label>
+            <label>Siding Material:
+                <select id="sidingMaterial">
+                    <option value="wood">Wood</option>
+                    <option value="vinyl">Vinyl</option>
+                    <option value="metal">Metal</option>
+                </select>
+            </label>
+
+            <!-- Accessories -->
+            <h2>Accessories</h2>
+            <label><input type="checkbox" id="windows" value="250"> Windows (+$250)</label>
+            <label><input type="checkbox" id="roll-top doors 10'x9'" value="1050"> roll-top doors 10'x9' (+$1050)</label>   
+            <label><input type="checkbox" id="roll-top doors 5'x8'" value="1000"> roll-top doors 5'x8' (+$1000)</label>            
+            <label><input type="checkbox" id="doors" value="350"> Extra Door (+$350)</label>
+            <label><input type="checkbox" id="skylights" value="600"> Skylights (+$600)</label>
+	    <label><input type="checkbox" id="vent" value="25"> vent (+$25)</label>
+	    <label><input type="checkbox" id="door drip-edge" value="35"> door drip-edge (+$35)</label> 
+	    <label><input type="checkbox" id="door-step" value="220"> door-step (+$220)</label> 
+	    <label><input type="checkbox" id="ramp" value="220"> ramp (+$220)</label>
+
+
+
+            <!-- Price Estimate -->
+            <h2>Price Estimate</h2>
+            <p id="priceEstimate">$0.00</p>
+
+            <button type="button" onclick="calculatePrice()">Calculate Price</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
